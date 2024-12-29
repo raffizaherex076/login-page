@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Sederhana</title>
+    <script>
+        function checkLogin() {
+            // Data login yang valid
+            var validUsername = "kakuser";
+            var validPassword = "12345";
+
+            // Ambil data dari form
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Cek apakah username dan password cocok
+            if (username === validUsername && password === validPassword) {
+                alert("Login berhasil! 🎉 Selamat datang, " + username);
+            } else {
+                alert("Login gagal! 😢 Username atau password salah.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Selamat Datang! 😊</h1>
+    <form onsubmit="event.preventDefault(); checkLogin();">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
